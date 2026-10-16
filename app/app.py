@@ -3,6 +3,7 @@ import streamlit as st
 
 from clustering_page import show_clustering_page
 from regression_page import show_regression_page
+from classification_page import show_classification_page
 
 
 st.set_page_config(
@@ -37,11 +38,7 @@ elif track == "Purchase Prediction":
     show_regression_page()
 
 elif track == "Income Classification":
-    st.header("📊 Income Classification")
-    st.info(
-        "The classification page will be connected once its "
-        "model artifact is ready."
-    )
+    show_classification_page()
 
 st.divider()
 st.caption("Built with Python · Streamlit · Scikit-learn")
